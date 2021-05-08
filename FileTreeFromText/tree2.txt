@@ -1,0 +1,912 @@
+.
+├── bin
+│   ├── bash
+│   ├── btrfs
+│   ├── btrfs-calc-size
+│   ├── btrfsck -> btrfs
+│   ├── btrfs-convert
+│   ├── btrfs-debug-tree
+│   ├── btrfs-find-root
+│   ├── btrfs-image
+│   ├── btrfs-map-logical
+│   ├── btrfs-select-super
+│   ├── btrfs-show-super
+│   ├── btrfstune
+│   ├── btrfs-zero-log
+│   ├── bunzip2
+│   ├── busybox
+│   ├── bzcat
+│   ├── bzcmp -> bzdiff
+│   ├── bzdiff
+│   ├── bzegrep -> bzgrep
+│   ├── bzexe
+│   ├── bzfgrep -> bzgrep
+│   ├── bzgrep
+│   ├── bzip2
+│   ├── bzip2recover
+│   ├── bzless -> bzmore
+│   ├── bzmore
+│   ├── cat
+│   ├── chacl
+│   ├── chgrp
+│   ├── chmod
+│   ├── chown
+│   ├── chvt
+│   ├── cp
+│   ├── cpio
+│   ├── dash
+│   ├── date
+│   ├── dd
+│   ├── df
+│   ├── dir
+│   ├── dmesg
+│   ├── dnsdomainname -> hostname
+│   ├── domainname -> hostname
+│   ├── dumpkeys
+│   ├── echo
+│   ├── ed
+│   ├── egrep
+│   ├── false
+│   ├── fgconsole
+│   ├── fgrep
+│   ├── findmnt
+│   ├── fsck.btrfs
+│   ├── fuser
+│   ├── fusermount
+│   ├── getfacl
+│   ├── grep
+│   ├── gunzip
+│   ├── gzexe
+│   ├── gzip
+│   ├── hostname
+│   ├── ip
+│   ├── journalctl
+│   ├── kbd_mode
+│   ├── kill
+│   ├── kmod
+│   ├── less
+│   ├── lessecho
+│   ├── lessfile -> lesspipe
+│   ├── lesskey
+│   ├── lesspipe
+│   ├── ln
+│   ├── loadkeys
+│   ├── login
+│   ├── loginctl
+│   ├── lowntfs-3g
+│   ├── ls
+│   ├── lsblk
+│   ├── lsmod -> kmod
+│   ├── mkdir
+│   ├── mkfs.btrfs
+│   ├── mknod
+│   ├── mktemp
+│   ├── more
+│   ├── mount
+│   ├── mountpoint
+│   ├── mt -> /etc/alternatives/mt
+│   ├── mt-gnu
+│   ├── mv
+│   ├── nano
+│   ├── nc -> /etc/alternatives/nc
+│   ├── nc.openbsd
+│   ├── netcat -> /etc/alternatives/netcat
+│   ├── netstat
+│   ├── networkctl
+│   ├── nisdomainname -> hostname
+│   ├── ntfs-3g
+│   ├── ntfs-3g.probe
+│   ├── ntfs-3g.secaudit
+│   ├── ntfs-3g.usermap
+│   ├── ntfscat
+│   ├── ntfscluster
+│   ├── ntfscmp
+│   ├── ntfsfallocate
+│   ├── ntfsfix
+│   ├── ntfsinfo
+│   ├── ntfsls
+│   ├── ntfsmove
+│   ├── ntfstruncate
+│   ├── ntfswipe
+│   ├── open -> openvt
+│   ├── openvt
+│   ├── pidof -> /sbin/killall5
+│   ├── ping
+│   ├── ping6
+│   ├── plymouth
+│   ├── ps
+│   ├── pwd
+│   ├── rbash -> bash
+│   ├── readlink
+│   ├── red
+│   ├── rm
+│   ├── rmdir
+│   ├── rnano -> nano
+│   ├── run-parts
+│   ├── sed
+│   ├── setfacl
+│   ├── setfont
+│   ├── setupcon
+│   ├── sh -> dash
+│   ├── sh.distrib -> dash
+│   ├── sleep
+│   ├── ss
+│   ├── static-sh -> busybox
+│   ├── stty
+│   ├── su
+│   ├── sync
+│   ├── systemctl
+│   ├── systemd -> /lib/systemd/systemd
+│   ├── systemd-ask-password
+│   ├── systemd-escape
+│   ├── systemd-hwdb
+│   ├── systemd-inhibit
+│   ├── systemd-machine-id-setup
+│   ├── systemd-notify
+│   ├── systemd-tmpfiles
+│   ├── systemd-tty-ask-password-agent
+│   ├── tailf
+│   ├── tar
+│   ├── tempfile
+│   ├── touch
+│   ├── true
+│   ├── udevadm
+│   ├── ulockmgr_server
+│   ├── umount
+│   ├── uname
+│   ├── uncompress
+│   ├── unicode_start
+│   ├── vdir
+│   ├── wdctl
+│   ├── which
+│   ├── whiptail
+│   ├── wslpath -> /init
+│   ├── ypdomainname -> hostname
+│   ├── zcat
+│   ├── zcmp
+│   ├── zdiff
+│   ├── zegrep
+│   ├── zfgrep
+│   ├── zforce
+│   ├── zgrep
+│   ├── zless
+│   ├── zmore
+│   └── znew
+├── boot
+│   └── grub
+├── dev
+│   ├── block
+│   ├── fd -> /proc/self/fd
+│   ├── kmsg
+│   ├── lxss
+│   ├── null
+│   ├── ptmx
+│   ├── pts
+│   ├── random
+│   ├── shm -> /run/shm
+│   ├── stderr -> /proc/self/fd/2
+│   ├── stdin -> /proc/self/fd/0
+│   ├── stdout -> /proc/self/fd/1
+│   ├── tty
+│   ├── tty0
+│   ├── tty1
+│   ├── ttyS0
+│   ├── ttyS1
+│   ├── ttyS10
+│   ├── ttyS100
+│   ├── ttyS101
+│   ├── ttyS102
+│   ├── ttyS103
+│   ├── ttyS104
+│   ├── ttyS105
+│   ├── ttyS106
+│   ├── ttyS107
+│   ├── ttyS108
+│   ├── ttyS109
+│   ├── ttyS11
+│   ├── ttyS110
+│   ├── ttyS111
+│   ├── ttyS112
+│   ├── ttyS113
+│   ├── ttyS114
+│   ├── ttyS115
+│   ├── ttyS116
+│   ├── ttyS117
+│   ├── ttyS118
+│   ├── ttyS119
+│   ├── ttyS12
+│   ├── ttyS120
+│   ├── ttyS121
+│   ├── ttyS122
+│   ├── ttyS123
+│   ├── ttyS124
+│   ├── ttyS125
+│   ├── ttyS126
+│   ├── ttyS127
+│   ├── ttyS128
+│   ├── ttyS129
+│   ├── ttyS13
+│   ├── ttyS130
+│   ├── ttyS131
+│   ├── ttyS132
+│   ├── ttyS133
+│   ├── ttyS134
+│   ├── ttyS135
+│   ├── ttyS136
+│   ├── ttyS137
+│   ├── ttyS138
+│   ├── ttyS139
+│   ├── ttyS14
+│   ├── ttyS140
+│   ├── ttyS141
+│   ├── ttyS142
+│   ├── ttyS143
+│   ├── ttyS144
+│   ├── ttyS145
+│   ├── ttyS146
+│   ├── ttyS147
+│   ├── ttyS148
+│   ├── ttyS149
+│   ├── ttyS15
+│   ├── ttyS150
+│   ├── ttyS151
+│   ├── ttyS152
+│   ├── ttyS153
+│   ├── ttyS154
+│   ├── ttyS155
+│   ├── ttyS156
+│   ├── ttyS157
+│   ├── ttyS158
+│   ├── ttyS159
+│   ├── ttyS16
+│   ├── ttyS160
+│   ├── ttyS161
+│   ├── ttyS162
+│   ├── ttyS163
+│   ├── ttyS164
+│   ├── ttyS165
+│   ├── ttyS166
+│   ├── ttyS167
+│   ├── ttyS168
+│   ├── ttyS169
+│   ├── ttyS17
+│   ├── ttyS170
+│   ├── ttyS171
+│   ├── ttyS172
+│   ├── ttyS173
+│   ├── ttyS174
+│   ├── ttyS175
+│   ├── ttyS176
+│   ├── ttyS177
+│   ├── ttyS178
+│   ├── ttyS179
+│   ├── ttyS18
+│   ├── ttyS180
+│   ├── ttyS181
+│   ├── ttyS182
+│   ├── ttyS183
+│   ├── ttyS184
+│   ├── ttyS185
+│   ├── ttyS186
+│   ├── ttyS187
+│   ├── ttyS188
+│   ├── ttyS189
+│   ├── ttyS19
+│   ├── ttyS190
+│   ├── ttyS191
+│   ├── ttyS2
+│   ├── ttyS20
+│   ├── ttyS21
+│   ├── ttyS22
+│   ├── ttyS23
+│   ├── ttyS24
+│   ├── ttyS25
+│   ├── ttyS26
+│   ├── ttyS27
+│   ├── ttyS28
+│   ├── ttyS29
+│   ├── ttyS3
+│   ├── ttyS30
+│   ├── ttyS31
+│   ├── ttyS32
+│   ├── ttyS33
+│   ├── ttyS34
+│   ├── ttyS35
+│   ├── ttyS36
+│   ├── ttyS37
+│   ├── ttyS38
+│   ├── ttyS39
+│   ├── ttyS4
+│   ├── ttyS40
+│   ├── ttyS41
+│   ├── ttyS42
+│   ├── ttyS43
+│   ├── ttyS44
+│   ├── ttyS45
+│   ├── ttyS46
+│   ├── ttyS47
+│   ├── ttyS48
+│   ├── ttyS49
+│   ├── ttyS5
+│   ├── ttyS50
+│   ├── ttyS51
+│   ├── ttyS52
+│   ├── ttyS53
+│   ├── ttyS54
+│   ├── ttyS55
+│   ├── ttyS56
+│   ├── ttyS57
+│   ├── ttyS58
+│   ├── ttyS59
+│   ├── ttyS6
+│   ├── ttyS60
+│   ├── ttyS61
+│   ├── ttyS62
+│   ├── ttyS63
+│   ├── ttyS64
+│   ├── ttyS65
+│   ├── ttyS66
+│   ├── ttyS67
+│   ├── ttyS68
+│   ├── ttyS69
+│   ├── ttyS7
+│   ├── ttyS70
+│   ├── ttyS71
+│   ├── ttyS72
+│   ├── ttyS73
+│   ├── ttyS74
+│   ├── ttyS75
+│   ├── ttyS76
+│   ├── ttyS77
+│   ├── ttyS78
+│   ├── ttyS79
+│   ├── ttyS8
+│   ├── ttyS80
+│   ├── ttyS81
+│   ├── ttyS82
+│   ├── ttyS83
+│   ├── ttyS84
+│   ├── ttyS85
+│   ├── ttyS86
+│   ├── ttyS87
+│   ├── ttyS88
+│   ├── ttyS89
+│   ├── ttyS9
+│   ├── ttyS90
+│   ├── ttyS91
+│   ├── ttyS92
+│   ├── ttyS93
+│   ├── ttyS94
+│   ├── ttyS95
+│   ├── ttyS96
+│   ├── ttyS97
+│   ├── ttyS98
+│   ├── ttyS99
+│   ├── urandom
+│   └── zero
+├── etc
+│   ├── acpi
+│   ├── adduser.conf
+│   ├── alternatives
+│   ├── apm
+│   ├── apparmor
+│   ├── apparmor.d
+│   ├── apport
+│   ├── apt
+│   ├── at.deny
+│   ├── bash.bashrc
+│   ├── bash_completion
+│   ├── bash_completion.d
+│   ├── bindresvport.blacklist
+│   ├── binfmt.d
+│   ├── byobu
+│   ├── ca-certificates
+│   ├── ca-certificates.conf
+│   ├── calendar
+│   ├── cloud
+│   ├── console-setup
+│   ├── cron.d
+│   ├── cron.daily
+│   ├── cron.hourly
+│   ├── cron.monthly
+│   ├── crontab
+│   ├── cron.weekly
+│   ├── crypttab
+│   ├── dbus-1
+│   ├── debconf.conf
+│   ├── debian_version
+│   ├── default
+│   ├── deluser.conf
+│   ├── depmod.d
+│   ├── dhcp
+│   ├── dpkg
+│   ├── drirc
+│   ├── ec2_version
+│   ├── emacs
+│   ├── environment
+│   ├── fonts
+│   ├── fstab
+│   ├── fuse.conf
+│   ├── gai.conf
+│   ├── groff
+│   ├── group
+│   ├── gshadow
+│   ├── gss
+│   ├── gtk-2.0
+│   ├── hdparm.conf
+│   ├── host.conf
+│   ├── hostname
+│   ├── hosts
+│   ├── hosts.allow
+│   ├── hosts.deny
+│   ├── init
+│   ├── init.d
+│   ├── initramfs-tools
+│   ├── inputrc
+│   ├── insserv
+│   ├── insserv.conf
+│   ├── insserv.conf.d
+│   ├── iproute2
+│   ├── iscsi
+│   ├── issue
+│   ├── issue.net
+│   ├── java-8-openjdk
+│   ├── kbd
+│   ├── kernel
+│   ├── kernel-img.conf
+│   ├── ldap
+│   ├── ld.so.cache
+│   ├── ld.so.conf
+│   ├── ld.so.conf.d
+│   ├── legal
+│   ├── libaudit.conf
+│   ├── locale.alias
+│   ├── locale.gen
+│   ├── localtime -> /usr/share/zoneinfo/America/Los_Angeles
+│   ├── logcheck
+│   ├── login.defs
+│   ├── logrotate.conf
+│   ├── logrotate.d
+│   ├── lsb-release
+│   ├── ltrace.conf
+│   ├── lvm
+│   ├── machine-id
+│   ├── magic
+│   ├── magic.mime
+│   ├── mailcap
+│   ├── mailcap.order
+│   ├── manpath.config
+│   ├── maven
+│   ├── mdadm
+│   ├── mime.types
+│   ├── mke2fs.conf
+│   ├── modprobe.d
+│   ├── modules
+│   ├── modules-load.d
+│   ├── mtab -> ../proc/self/mounts
+│   ├── nanorc
+│   ├── network
+│   ├── NetworkManager
+│   ├── networks
+│   ├── newt
+│   ├── nsswitch.conf
+│   ├── opt
+│   ├── os-release -> ../usr/lib/os-release
+│   ├── overlayroot.conf
+│   ├── overlayroot.local.conf
+│   ├── pam.conf
+│   ├── pam.d
+│   ├── passwd
+│   ├── perl
+│   ├── pki
+│   ├── pm
+│   ├── polkit-1
+│   ├── pollinate
+│   ├── popularity-contest.conf
+│   ├── ppp
+│   ├── profile
+│   ├── profile.d
+│   ├── profile.save
+│   ├── protocols
+│   ├── pulse
+│   ├── rc0.d
+│   ├── rc1.d
+│   ├── rc2.d
+│   ├── rc3.d
+│   ├── rc4.d
+│   ├── rc5.d
+│   ├── rc6.d
+│   ├── rc.local
+│   ├── rcS.d
+│   ├── resolvconf
+│   ├── resolv.conf -> ../run/resolvconf/resolv.conf
+│   ├── rmt
+│   ├── rpc
+│   ├── rsyslog.conf
+│   ├── rsyslog.d
+│   ├── screenrc
+│   ├── securetty
+│   ├── security
+│   ├── selinux
+│   ├── sensors3.conf
+│   ├── sensors.d
+│   ├── services
+│   ├── sgml
+│   ├── shadow
+│   ├── shells
+│   ├── skel
+│   ├── sos.conf
+│   ├── ssh
+│   ├── ssl
+│   ├── subgid
+│   ├── subgid-
+│   ├── subuid
+│   ├── subuid-
+│   ├── sudoers
+│   ├── sudoers.d
+│   ├── sysctl.conf
+│   ├── sysctl.d
+│   ├── systemd
+│   ├── terminfo
+│   ├── timezone
+│   ├── tmpfiles.d
+│   ├── ucf.conf
+│   ├── udev
+│   ├── ufw
+│   ├── updatedb.conf
+│   ├── update-manager
+│   ├── update-motd.d
+│   ├── update-notifier
+│   ├── vim
+│   ├── vmware-tools
+│   ├── vtrgb -> /etc/alternatives/vtrgb
+│   ├── wgetrc
+│   ├── X11
+│   ├── xdg
+│   ├── xml
+│   └── zsh_command_not_found
+├── grep
+├── home
+├── init
+├── lib
+│   ├── apparmor
+│   ├── cpp -> /etc/alternatives/cpp
+│   ├── cryptsetup
+│   ├── hdparm
+│   ├── ifupdown
+│   ├── init
+│   ├── klibc-k3La8MUnuzHQ0_kG8hokcGAC0PA.so
+│   ├── libhandle.so.1 -> libhandle.so.1.0.3
+│   ├── libhandle.so.1.0.3
+│   ├── lsb
+│   ├── modprobe.d
+│   ├── modules
+│   ├── modules-load.d
+│   ├── open-iscsi
+│   ├── recovery-mode
+│   ├── resolvconf
+│   ├── systemd
+│   ├── terminfo
+│   ├── udev
+│   ├── ufw
+│   ├── x86_64-linux-gnu
+│   └── xtables
+├── lib64
+│   └── ld-linux-x86-64.so.2 -> /lib/x86_64-linux-gnu/ld-2.23.so
+├── media
+├── mnt
+│   └── c
+├── opt
+├── proc
+│   ├── 1
+│   ├── 452
+│   ├── 6
+│   ├── 7
+│   ├── bus
+│   ├── cgroups
+│   ├── cmdline
+│   ├── cpuinfo
+│   ├── filesystems
+│   ├── interrupts
+│   ├── loadavg
+│   ├── meminfo
+│   ├── mounts -> self/mounts
+│   ├── net -> self/net
+│   ├── self -> 452
+│   ├── stat
+│   ├── sys
+│   ├── tty
+│   ├── uptime
+│   ├── version
+│   └── version_signature
+├── root
+│   ├── anaconda3
+│   ├── con
+│   ├── JavaStuff
+│   ├── mcrcon
+│   ├── NVidia_SPADE
+│   ├── Other
+│   ├── p.txt
+│   ├── py3
+│   └── scripts
+├── run
+│   ├── lock
+│   ├── mount
+│   ├── resolvconf
+│   ├── shm
+│   └── user
+├── sbin
+│   ├── acpi_available
+│   ├── agetty
+│   ├── apm_available
+│   ├── apparmor_parser
+│   ├── badblocks
+│   ├── blkdiscard
+│   ├── blkid
+│   ├── blockdev
+│   ├── bridge
+│   ├── capsh
+│   ├── cfdisk
+│   ├── cgdisk
+│   ├── chcpu
+│   ├── cryptdisks_start
+│   ├── cryptdisks_stop
+│   ├── cryptsetup
+│   ├── cryptsetup-reencrypt
+│   ├── ctrlaltdel
+│   ├── debugfs
+│   ├── depmod -> /bin/kmod
+│   ├── dhclient
+│   ├── dhclient-script
+│   ├── dmeventd
+│   ├── dmsetup
+│   ├── dosfsck -> fsck.fat
+│   ├── dosfslabel -> fatlabel
+│   ├── dumpe2fs
+│   ├── e2fsck
+│   ├── e2image
+│   ├── e2label -> tune2fs
+│   ├── e2undo
+│   ├── ethtool
+│   ├── fatlabel
+│   ├── fdisk
+│   ├── findfs
+│   ├── fixparts
+│   ├── fsadm
+│   ├── fsck
+│   ├── fsck.cramfs
+│   ├── fsck.ext2 -> e2fsck
+│   ├── fsck.ext3 -> e2fsck
+│   ├── fsck.ext4 -> e2fsck
+│   ├── fsck.ext4dev -> e2fsck
+│   ├── fsck.fat
+│   ├── fsck.minix
+│   ├── fsck.msdos -> fsck.fat
+│   ├── fsck.nfs
+│   ├── fsck.vfat -> fsck.fat
+│   ├── fsck.xfs
+│   ├── fsfreeze
+│   ├── fstab-decode
+│   ├── fstrim
+│   ├── gdisk
+│   ├── getcap
+│   ├── getpcaps
+│   ├── getty -> agetty
+│   ├── halt -> /bin/systemctl
+│   ├── hdparm
+│   ├── hwclock
+│   ├── ifconfig
+│   ├── ifdown -> ifup
+│   ├── ifenslave
+│   ├── ifenslave-2.6 -> ifenslave
+│   ├── ifquery -> ifup
+│   ├── ifup
+│   ├── init -> /lib/systemd/systemd
+│   ├── insmod -> /bin/kmod
+│   ├── installkernel
+│   ├── ip -> /bin/ip
+│   ├── ip6tables -> xtables-multi
+│   ├── ip6tables-restore -> xtables-multi
+│   ├── ip6tables-save -> xtables-multi
+│   ├── ipmaddr
+│   ├── iptables -> xtables-multi
+│   ├── iptables-restore -> xtables-multi
+│   ├── iptables-save -> xtables-multi
+│   ├── iptunnel
+│   ├── iscsiadm
+│   ├── iscsid
+│   ├── iscsi_discovery
+│   ├── iscsi-iname
+│   ├── iscsistart
+│   ├── isosize
+│   ├── iwconfig
+│   ├── iwevent
+│   ├── iwgetid
+│   ├── iwlist
+│   ├── iwpriv
+│   ├── iwspy
+│   ├── kbdrate
+│   ├── killall5
+│   ├── ldconfig
+│   ├── ldconfig.real
+│   ├── logsave
+│   ├── losetup
+│   ├── lsmod -> /bin/kmod
+│   ├── lvchange -> lvm
+│   ├── lvconvert -> lvm
+│   ├── lvcreate -> lvm
+│   ├── lvdisplay -> lvm
+│   ├── lvextend -> lvm
+│   ├── lvm
+│   ├── lvmchange -> lvm
+│   ├── lvmconf
+│   ├── lvmconfig -> lvm
+│   ├── lvmdiskscan -> lvm
+│   ├── lvmdump
+│   ├── lvmetad
+│   ├── lvmpolld
+│   ├── lvmsadc -> lvm
+│   ├── lvmsar -> lvm
+│   ├── lvreduce -> lvm
+│   ├── lvremove -> lvm
+│   ├── lvrename -> lvm
+│   ├── lvresize -> lvm
+│   ├── lvs -> lvm
+│   ├── lvscan -> lvm
+│   ├── MAKEDEV
+│   ├── mdadm
+│   ├── mdmon
+│   ├── mii-tool
+│   ├── mkdosfs -> mkfs.fat
+│   ├── mke2fs
+│   ├── mkfs
+│   ├── mkfs.bfs
+│   ├── mkfs.cramfs
+│   ├── mkfs.ext2 -> mke2fs
+│   ├── mkfs.ext3 -> mke2fs
+│   ├── mkfs.ext4 -> mke2fs
+│   ├── mkfs.ext4dev -> mke2fs
+│   ├── mkfs.fat
+│   ├── mkfs.minix
+│   ├── mkfs.msdos -> mkfs.fat
+│   ├── mkfs.ntfs -> mkntfs
+│   ├── mkfs.vfat -> mkfs.fat
+│   ├── mkfs.xfs
+│   ├── mkhomedir_helper
+│   ├── mkntfs
+│   ├── mkswap
+│   ├── modinfo -> /bin/kmod
+│   ├── modprobe -> /bin/kmod
+│   ├── mount.drvfs -> /init
+│   ├── mount.fuse
+│   ├── mount.lowntfs-3g -> /bin/lowntfs-3g
+│   ├── mount.ntfs -> mount.ntfs-3g
+│   ├── mount.ntfs-3g -> /bin/ntfs-3g
+│   ├── mount.vmhgfs
+│   ├── nameif
+│   ├── ntfsclone
+│   ├── ntfscp
+│   ├── ntfslabel
+│   ├── ntfsresize
+│   ├── ntfsundelete
+│   ├── on_ac_power
+│   ├── pam_extrausers_chkpwd
+│   ├── pam_extrausers_update
+│   ├── pam_tally
+│   ├── pam_tally2
+│   ├── parted
+│   ├── partprobe
+│   ├── pivot_root
+│   ├── plipconfig
+│   ├── plymouthd
+│   ├── poweroff -> /bin/systemctl
+│   ├── pvchange -> lvm
+│   ├── pvck -> lvm
+│   ├── pvcreate -> lvm
+│   ├── pvdisplay -> lvm
+│   ├── pvmove -> lvm
+│   ├── pvremove -> lvm
+│   ├── pvresize -> lvm
+│   ├── pvs -> lvm
+│   ├── pvscan -> lvm
+│   ├── rarp
+│   ├── raw
+│   ├── reboot -> /bin/systemctl
+│   ├── resize2fs
+│   ├── resolvconf
+│   ├── rmmod -> /bin/kmod
+│   ├── route
+│   ├── rtacct
+│   ├── rtmon
+│   ├── runlevel -> /bin/systemctl
+│   ├── runuser
+│   ├── setcap
+│   ├── setvtrgb
+│   ├── sfdisk
+│   ├── sgdisk
+│   ├── shadowconfig
+│   ├── shutdown -> /bin/systemctl
+│   ├── slattach
+│   ├── start-stop-daemon
+│   ├── sulogin
+│   ├── swaplabel
+│   ├── swapoff
+│   ├── swapon
+│   ├── switch_root
+│   ├── sysctl
+│   ├── tc
+│   ├── telinit -> /bin/systemctl
+│   ├── tipc
+│   ├── tune2fs
+│   ├── udevadm -> /bin/udevadm
+│   ├── unix_chkpwd
+│   ├── unix_update
+│   ├── ureadahead
+│   ├── vconfig
+│   ├── veritysetup
+│   ├── vgcfgbackup -> lvm
+│   ├── vgcfgrestore -> lvm
+│   ├── vgchange -> lvm
+│   ├── vgck -> lvm
+│   ├── vgconvert -> lvm
+│   ├── vgcreate -> lvm
+│   ├── vgdisplay -> lvm
+│   ├── vgexport -> lvm
+│   ├── vgextend -> lvm
+│   ├── vgimport -> lvm
+│   ├── vgimportclone
+│   ├── vgmerge -> lvm
+│   ├── vgmknodes -> lvm
+│   ├── vgreduce -> lvm
+│   ├── vgremove -> lvm
+│   ├── vgrename -> lvm
+│   ├── vgs -> lvm
+│   ├── vgscan -> lvm
+│   ├── vgsplit -> lvm
+│   ├── wipefs
+│   ├── xfs_repair
+│   ├── xtables-multi
+│   └── zramctl
+├── snap
+├── srv
+├── sys
+│   ├── block
+│   ├── bus
+│   ├── class
+│   ├── dev
+│   ├── devices
+│   ├── firmware
+│   ├── fs
+│   ├── kernel
+│   ├── module
+│   └── power
+├── tmp
+│   ├── hsperfdata_root
+│   └── python
+├── usr
+│   ├── bin
+│   ├── games
+│   ├── grep
+│   ├── include
+│   ├── jdk
+│   ├── lib
+│   ├── local
+│   ├── sbin
+│   ├── share
+│   └── src
+└── var
+    ├── backups
+    ├── cache
+    ├── crash
+    ├── lib
+    ├── local
+    ├── lock -> /run/lock
+    ├── log
+    ├── mail
+    ├── opt
+    ├── run -> /run
+    ├── snap
+    ├── spool
+    └── tmp
+
+192 directories, 717 files

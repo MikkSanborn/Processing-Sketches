@@ -5,13 +5,13 @@
 
 
 //\begin{asy}
-//  import graph;
+//  import graph; 
 
 float scale = 50;
 float trans_x = 000;
 float trans_y = 300;
 
-//  size(500);
+//  size(500); 
 void setup() {
   size(500, 500);
 
@@ -41,9 +41,9 @@ void draw() {
       Pair o = new Pair(2.5*c, 2.5*(-r));
 
       //      label("$\{\frac{"+string(n)+"}{"+string(d)+"}\}$",(2.5*(col),2.5*(-row)-1.25));
-     
+      
       text((n + "/" + d), (2.5*c-.25)*scale+trans_x, (r)*scale+trans_y);
-     
+      
       pushMatrix();
       translate(trans_x, trans_y);
       scale(scale);
@@ -97,5 +97,3 @@ class Pair {
 //\end{center}
 
 //\end{document}
-// ~Mikk "μικκ" S.
-// Class of 2022

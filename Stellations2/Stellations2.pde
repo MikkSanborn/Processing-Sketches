@@ -1,78 +1,99 @@
 
-float scale = 50; // scale multiplier
-float trans_x = 0; // translate x
-float trans_y = 0; // translate y
+//\begin{document}
 
-int num_per_row = 4;
+//\begin{center}
 
+
+//\begin{asy}
+//  import graph; 
+
+float scale = 50;
+float trans_x = 000;
+float trans_y = 300;
+
+//  size(500); 
 void setup() {
-  size(500, 500); // 500 seems deece
+  size(500, 500);
 
-  strokeWeight(1/scale); // in anticipation of scaling larger later
-  textSize(12); // default, might as well put it here
-  fill(122); // for text
+  strokeWeight(1/scale);
+  textSize(12);
+  fill(122);
 }
 
-int n = 9; // number of sides
+//  int n=10; //number of vertices
+int n = 10;
 
-float rot = (n%2)*(-90); // rotate (degrees), 0 for even n, -90 for odd n. fixed later by the code
+//  real r=0; //rotation angle (if n odd, -90 degrees, else 0 -- orients a horizontal base)
+float real = 0; // maybe not float?
 
-final float d_init = 2; // int values are best
-float d = d_init; // use?
-
-int count = n/2;
+//    int d=2; // ?
+int d = 2; // use?
 
 void draw() {
   background(255);
-  
-  d = d_init;
-  
-  // rot++;
-  
-  for (int r = 1; r < count && (int) d<=count; r++) { // 4 things per column, so only increase row if >4 cols
-    // println(r);
-    for (int c = 1; c < num_per_row+1 && (int) d<=count; c++, d++) { // 4 things in each col
-    // println("\t" + c);
-      //println("\t" + c + "\t" + d);
-      //println("\t\td<=n/2  " + d + "<=" + n/2 + "\t" + (d<=n/2));
-      Pair o = new Pair(2.5*c, 2.5*(r)); // make the origin (center)
+  //    for (int row=1; row<n/4; ++row) {
+  for (int r = 1; r < n/4; r++) {
 
-      text((n + "/" + d), (2.5*c-.25)*scale+trans_x, (2.5*r+1.25)*scale+trans_y); // display text (placement may be off)
+    //        for (int col=1; col<4 && d<=n/2; ++col, ++d) {
+    for (int c = 1; c < 4 && d<=n/2; c++, d++) {
 
-      pushMatrix(); // save current transform
-      translate(trans_x, trans_y); // translate from (0,0) towards center
-      scale(scale); // increase scale/size
+      //        pair o=(2.5*(col),2.5*(-row));
+      Pair o = new Pair(2.5*c, 2.5*(-r));
 
-      for (int i = 1; i < n+1; i++) { // for each vertex,
-        float dir_x = radians((i)*360.0/n-rot); // find theta x
-        Pair x = new Pair(o.x+cos(dir_x), o.y+sin(dir_x)); // mark the point corresponding to theta x
-        
-        float dir_y = radians((i+d)*360.0/n-rot); // find theta y
-        Pair y = new Pair(o.x+cos(dir_y), o.y+sin(dir_y)); // mark the point corresponding to theta y
-        
-        float dir_z = radians((i+1)*360.0/n-rot); // find theta z
-        Pair z = new Pair(o.x+cos(dir_z), o.y+sin(dir_z)); // mark the point corresponding to theta z
+      //      label("$\{\frac{"+string(n)+"}{"+string(d)+"}\}$",(2.5*(col),2.5*(-row)-1.25));
+      
+      text((n + "/" + d), (2.5*c-.25)*scale+trans_x, (r)*scale+trans_y);
+      
+      pushMatrix();
+      translate(trans_x, trans_y);
+      scale(scale);
 
-        stroke(255, 0, 0); // stroke red
-        line(x.x, x.y, y.x, y.y); // line from x to y
-        // println(x.x + "  " + x.y + "  " + y.x + "  " + y.y);
+      //          for (int i=1; i<n+1; ++i) {
+      for (int i = 1; i < n+1; i++) {
+        //                  pair x=o+dir(((i)*360)/n-r);
+        float dir_x = radians(i*360.0/n-real);
+        Pair x = new Pair(o.x+cos(dir_x), o.y+sin(dir_x));
+        //                  pair y=o+dir(((i+d)*360)/n-r);
+        float dir_y = radians((i+d)*360.0/n-real);
+        Pair y = new Pair(o.x+cos(dir_y), o.y+sin(dir_y));
 
-        stroke(0); // stroke black
-        line(x.x, x.y, z.x, z.y); // line from x to z
+        //                  pair z=o+dir(((i+1)*360)/n-r);
+        float dir_z = radians((i+1)*360.0/n-real);
+        Pair z = new Pair(o.x+cos(dir_z), o.y+sin(dir_z));
+
+        //                  draw(x--y,red);
+        stroke(255, 0, 0);
+        line(x.x, x.y, y.x, y.y);
+        println(x.x + "  " + x.y + "  " + y.x + "  " + y.y);
+
+        //                  draw(x--z);
+        stroke(0);
+        line(x.x, x.y, z.x, z.y);
+
+        //                  }
       }
-      popMatrix(); // reset matrix to prior version
-      // println();
+      popMatrix();
+      println();
+
+      //        }
     }
+
+    //    }
   }
-  // println("done"); // idk let the user know that it's done
-  // stop(); // don't loop :)
+  println("done");
+  stop();
+  //\end{asy}
 }
- 
-class Pair { // to replace the pair object
-  public float x, y; // just make it public bc methods take effort :/
+
+class Pair {
+  public float x, y;
 
   public Pair(float x, float y) {
     this.x = x;
     this.y = y;
   }
 }
+
+//\end{center}
+
+//\end{document}
